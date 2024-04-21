@@ -1,30 +1,24 @@
-import { useState } from "react";
+import PersonalInfo from "./PersonalInfo"
+import Education from "./Education";
+import { useState } from "react"
+import data from "./data"
 
-function Input({ label, type, value, handler }) {
-  return (
-    <label> 
-      {label}
-      <input
-        type={type}
-        value={value}
-        onChange={handler}
-      />
-    </label>
-  )
-}
+function AddPersonalInfo() {
+    const [info, setInfo] = useState(data);
 
-function PersonalInfo() {
-  const [fullName, setFullName] = useState("");
-
-  function handleChange(event) {
-    setFullName(event.target.value)
+    function handleOnChange(event) {
+      const name = event.target.name;
+      const value = event.target.value;
+      
+      setInfo({ ...info, [name]: value })
+    }
+  
+    return (
+      <>
+      <PersonalInfo fullName={info.fullName} email={info.email} phone={info.phone} address={info.address} onChange={handleOnChange} />
+      <Education school={info.school} degree={info.degree} startDate={info.schoolStart} endDate={info.schoolEnd} location={info.schoolLocation} onChange={handleOnChange} />
+      </>
+    )
   }
-
-  return (
-    <>
-      <Input type="text" label="Full name" value={fullName} handler={handleChange} />
-    </>
-  )
-}
-
-export default PersonalInfo;
+  
+  export default AddPersonalInfo;
