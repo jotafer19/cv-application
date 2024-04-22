@@ -8,6 +8,12 @@ const data = {
     schoolStart: "2018",
     schoolEnd: "2022",
     schoolLocation: "Madrid",
+    companyName: "Public Safety",
+    positionName: "Officer",
+    experienceStart: "2020",
+    experienceEnd: "present",
+    experienceLocation: "Madrid",
+    description: "Save CSM",    
 }
 
 export default data;
