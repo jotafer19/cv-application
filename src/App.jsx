@@ -1,26 +1,43 @@
-import PersonalInfo from "./PersonalInfo"
-import Education from "./Education";
-import { useState } from "react"
-import data from "./data"
-import Experience from "./Experience";
+import { useState } from "react";
+import data from "./data";
+import PersonalSection from "./Personal-Data-Section";
+import PersonalDataDisplay from "./Personal-Data-Display";
+import EducationSection from "./Education-Section";
 
-function AddPersonalInfo() {
-    const [info, setInfo] = useState(data);
+function App() {
+  const [personalData, setPersonalData] = useState(data.personal);
+  const [educationData, setEducationData] = useState(data.education);
+  const [submittedData, setSubmittedData] = useState(data);
 
-    function handleOnChange(event) {
-      const name = event.target.name;
-      const value = event.target.value;
-
-      setInfo({ ...info, [name]: value })
-    }
-  
-    return (
-      <>
-      <PersonalInfo fullName={info.fullName} email={info.email} phone={info.phone} address={info.address} onChange={handleOnChange} />
-      <Education school={info.school} degree={info.degree} startDate={info.schoolStart} endDate={info.schoolEnd} location={info.schoolLocation} onChange={handleOnChange} />
-      <Experience companyName={info.companyName} positionName={info.positionName} experienceStart={info.experienceStart} experienceEnd={info.experienceEnd} experienceLocation={info.experienceLocation} description={info.description} onChange={handleOnChange} />
-      </>
-    )
+  function handlePersonalData(event) {
+    const { name, value } = event.target
+    setPersonalData({ ...personalData, [name]: value })
   }
-  
-  export default AddPersonalInfo;
+
+  function handleEducationData(event, id) {
+    const { name, value } = event.target;
+    setEducationData(educationData.map(item => {
+      if (item.id === id) {
+        return (
+          {...item, [name]: value}
+        )
+      } else {
+        return item;
+      }
+    }))
+  }
+
+  function handleSubmittedData() {
+    setSubmittedData({personal: personalData, education: educationData})
+  }
+
+  return (
+    <>
+      <PersonalSection data={personalData} onChange={handlePersonalData} onSubmit={handleSubmittedData} />
+      <PersonalDataDisplay submittedData={submittedData.personal} />
+      <EducationSection data={educationData} onChange={handleEducationData} />
+    </>
+  )
+}
+
+export default App;
