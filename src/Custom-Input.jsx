@@ -1,11 +1,12 @@
-function CustomInput({ labelName, id, value, type="text", onChange }) {
+function CustomInput({ labelName, name, id, value, type="text", onChange }) {
     return (
         <div className="input-group">
-            <label htmlFor={id}>
+            <label htmlFor={name + "-" + id}>
                 {labelName}
             </label>
             <input
-                name={id}
+                name={name}
+                id={name + "-" + id}
                 value={value}
                 type={type}
                 onChange={onChange}

@@ -10,14 +10,14 @@ const data = {
     education: [
         {
             id: uniqid(),
-            name: "London University",
+            school: "London University",
             degree: "Robotics",
             startDate: "2020",
             endDate: "2024",
         },
         {
             id: uniqid(),
-            name: "New York University",
+            school: "New York University",
             degree: "Mathematics",
             startDate: "2016",
             endDate: "2020",
