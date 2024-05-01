@@ -14,6 +14,7 @@ const data = {
             degree: "Robotics",
             startDate: "2020",
             endDate: "2024",
+            location: "London, UK"
         },
         {
             id: uniqid(),
@@ -21,6 +22,25 @@ const data = {
             degree: "Mathematics",
             startDate: "2016",
             endDate: "2020",
+            location: "New York, USA"
+        }
+    ],
+    experience: [
+        {
+            id: uniqid(),
+            company: "Umbrella Inc.",
+            position: "Director",
+            startDate: "2020",
+            endDate: "2024",
+            location: "London, UK"
+        },
+        {
+            id: uniqid(),
+            company: "Black Mesa Labs",
+            position: "UI Designer",
+            startDate: "2016",
+            endDate: "2020",
+            location: "Detroit, USA"
         }
     ]
 }
