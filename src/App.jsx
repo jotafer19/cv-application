@@ -7,10 +7,10 @@ function App() {
   const [finalData, setFinalData] = useState(data);
 
   return (
-    <>
+    <main>
       <FormSection finalData={finalData} setFinalData={setFinalData} />
       <DisplaySection finalData={finalData} />
-    </>
+    </main>
   )
 }
 
