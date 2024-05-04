@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data from "./data";
-import FormSection from "./Personal-Data";
+import FormSection from "./Form-Section";
 import DisplaySection from "./Display-Section";
 
 function App() {

@@ -39,7 +39,7 @@ function FormSection({ finalData, setFinalData }) {
         setFinalData(newInputData)
     }
 
-    function handleAddItem(event, key) {
+    function handleAddItem(key) {
         if (key === "education") {
             setInputData({ ...inputData, [key]: [ ...inputData[key], {
                 id: uniqid(),
@@ -47,15 +47,25 @@ function FormSection({ finalData, setFinalData }) {
                 degree: "",
                 startDate: "",
                 endDate: "",
-            } ]})
+                location: "",
+            }]})
+        } else if (key === "experience") {
+            setInputData({ ...inputData, [key]: [ ...inputData[key], {
+                id: uniqid(),
+                company: "",
+                position: "",
+                startDate: "",
+                endDate: "",
+                location: "",
+            }]})
         }
     }
 
     return (
-        <section>
+        <section className="form-section">
             <PersonalContainer inputData={inputData} onChange={(event) => handleInputChange(event, "personal")} onSubmit={handleSubmitForm} />
-            <EducationContainer inputData={inputData} onChange={handleEditItem} onSubmit={handleSubmitForm} onDelete={handleDeleteItem} />
-            <ExperienceContainer inputData={inputData} onChange={handleEditItem} onSubmit={handleSubmitForm} onDelete={handleDeleteItem} />
+            <EducationContainer inputData={inputData} onChange={handleEditItem} onSubmit={handleSubmitForm} onDelete={handleDeleteItem} onAdd={handleAddItem} />
+            <ExperienceContainer inputData={inputData} onChange={handleEditItem} onSubmit={handleSubmitForm} onDelete={handleDeleteItem} onAdd={handleAddItem} />
         </section>
     )
 }
