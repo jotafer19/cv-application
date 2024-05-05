@@ -1,3 +1,14 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("./assets/fonts/poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./assets/fonts/poppins/Poppins-Bold.ttf");
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,16 +16,24 @@
 }
 
 :root {
-    --background-color: #242424;
+    --background-color: #ffffff;
     --section-background-color: #e3e3e3;
     --delete-button: #ef4444;
     --add-button: #34d399;
     --edit-button: #38bdf8;
+    --display-banner: #242424;
 }
 
 body {
     font-size: 1rem;
     background-color: var(--background-color);
+    font-family: 'Poppins', 'Courier New', Courier, monospace;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 main {
@@ -117,11 +136,12 @@ main {
 /* ------- */
 
 .display-section {
-    position: sticky;
-    top: 0;    
+    position: relative;
 }
 
 .display-all-container {
+    position: sticky;
+    top: 0;
     padding: 2rem;
     display: flex;
     flex-direction: column;
@@ -148,7 +168,7 @@ main {
 
 h3.section-title {
     padding: .5rem;
-    background-color: var(--background-color);
+    background-color: var(--display-banner);
     color: white;
 }
 
@@ -160,7 +180,14 @@ h3.section-title {
 
 .item {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 4fr;
+    gap: 1rem;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
 }
 
 .item-name {

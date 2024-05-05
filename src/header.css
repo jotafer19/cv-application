@@ -1,0 +1,13 @@
+.header {
+    height: 10svh;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 20px 2px black;
+}
+
+.web-title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+}
