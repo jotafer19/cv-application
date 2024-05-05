@@ -12,18 +12,20 @@ function PersonalContainer({ inputData, onChange, onSubmit }) {
     }
 
     return (
-        <div className="personal input-section">
+        <div className="personal data-container">
             <button className="section-button" onClick={() => setIsActive(!isActive)}>
                 <h2>Personal Information</h2>
             </button>
             {isActive && (
                 editMode ? (
                     <form className="data-form personal-form" action="#" onSubmit={handleSubmitButton}>
-                        <PersonalDataForm inputData={inputData} onChange={onChange} />
+                        <div className="items-container">
+                            <PersonalDataForm inputData={inputData} onChange={onChange} />
+                        </div>
                         <button className="btn btn-save" type="submit">Save</button>
                     </form>
                 ) : (
-                    <div className="data-display">
+                    <div className="data-form personal-form">
                         <PersonalFormDisplay inputData={inputData} />
                         <button className="btn btn-edit" onClick={() => setEditMode(!editMode)}>Edit</button>
                     </div>

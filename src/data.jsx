@@ -32,7 +32,8 @@ const data = {
             position: "Director",
             startDate: "2020",
             endDate: "2024",
-            location: "London, UK"
+            location: "London, UK",
+            description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quisquam eligendi ducimus nobis culpa? Reprehenderit distinctio rerum, tenetur vel veritatis ducimus! Minus rerum blanditiis numquam amet sed sapiente! Id, fuga."
         },
         {
             id: uniqid(),
@@ -40,8 +41,9 @@ const data = {
             position: "UI Designer",
             startDate: "2016",
             endDate: "2020",
-            location: "Detroit, USA"
-        }
+            location: "Detroit, USA",
+            description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora sequi esse cumque nemo, debitis delectus iste pariatur accusantium. Hic vel praesentium omnis sunt totam reiciendis eligendi, beatae doloremque vero maiores."
+        },
     ]
 }
 

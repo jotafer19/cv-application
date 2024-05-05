@@ -1,16 +1,31 @@
 function CustomInput({ labelName, name, id, value, type="text", onChange }) {
     return (
         <div className="input-group">
-            <label htmlFor={name + "-" + id}>
+            <label className="p-label" htmlFor={name + "-" + id}>
                 {labelName}
             </label>
-            <input
-                name={name}
-                id={name + "-" + id}
-                value={value}
-                type={type}
-                onChange={onChange}
-            />
+            <>
+                {type === "textarea" ? (
+                    <textarea 
+                        className="input"
+                        name={name}
+                        id={name + "-" + id}
+                        type={type}
+                        onChange={onChange}
+                        cols="30"
+                        rows="6"
+                    >{value}</textarea>
+                ) : (
+                    <input
+                        className="input"
+                        name={name}
+                        id={name + "-" + id}
+                        value={value}
+                        type={type}
+                        onChange={onChange}
+                    />
+                )}
+            </>
         </div>
     )
 }

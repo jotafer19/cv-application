@@ -12,25 +12,27 @@ function EducationContainer({ inputData, onChange, onSubmit, onDelete, onAdd }) 
     }
 
     return (
-        <div className="education input-section">
+        <div className="education data-container">
             <button className="section-button" onClick={() => setIsActive(!isActive)}>
                 <h2>Education</h2>
             </button>
             {isActive && (
                 editMode ? (
                     <form className="data-form education-form" action="#" onSubmit={handleOnSubmit}>
-                        {inputData.education.map(item => {
-                            return <EducationDataForm 
-                                key={item.id} 
-                                item={item} 
-                                onChange={(event) => onChange(event, item.id, "education")} 
-                                onDelete={() => onDelete(item.id, "education")} />
-                        })}
+                        <div className="items-container">
+                            {inputData.education.map(item => {
+                                return <EducationDataForm
+                                    key={item.id}
+                                    item={item}
+                                    onChange={(event) => onChange(event, item.id, "education")}
+                                    onDelete={() => onDelete(item.id, "education")} />
+                            })}
+                        </div>
                         <button className="btn btn-add" type="button" onClick={() => onAdd("education")}>Add</button>
                         <button className="btn btn-save" type="submit">Save</button>
                     </form>
                 ) : (
-                    <div className="data-display">
+                    <div className="data-form education-form">
                         <EducationFormDisplay inputData={inputData} />
                         <button className="btn btn-edit" onClick={() => setEditMode(!editMode)}>Edit</button>
                     </div>

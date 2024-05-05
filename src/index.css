@@ -4,80 +4,84 @@
     margin: 0;
 }
 
+:root {
+    --background-color: #242424;
+    --section-background-color: #e3e3e3;
+    --delete-button: #ef4444;
+    --add-button: #34d399;
+    --edit-button: #38bdf8;
+}
+
+body {
+    font-size: 1rem;
+    background-color: var(--background-color);
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
     gap: 1rem;
-}
-
-.input-section {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: rgb(220, 220, 220);
-    border-radius: 1rem;
 }
 
 .form-section {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
+    overflow: auto;
+}
+
+.data-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: var(--section-background-color);
 }
 
 .section-button {
-    padding: 1rem 2rem;
+    padding: 1rem;
     background-color: transparent;
     border: none;
+    border-radius: 1rem;
     cursor: pointer;
 }
-.data-display,
-.data-form {
+
+.data-form,
+.items-container {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-.items-container,
 .item-form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.item-display {
-    padding: 1rem 0;
-}
-
-.item-form 
-
-.item-display:not(:last-child),
 .item-form:not(:last-child) {
-    border-bottom:  1px solid black;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
 }
 
-.item-group,
 .input-group {
     display: flex;
     flex-direction: column;
-    gap: .4rem;
+    gap: .3rem;
 }
 
-.p-label,
-label {
-    font-weight: bold;
-}
-
+.input,
 .p-display {
-    padding: .5rem;
+    padding: .3rem;
+    border: none;
+    border-radius: .5rem;
 }
 
-input {
-    padding: .5rem;
-    border-radius: 12px;
-    border: none;
+.p-label {
+    font-weight: bold;
 }
 
 .btn {
@@ -86,18 +90,79 @@ input {
     align-self: center;
     border: none;
     border-radius: .5rem;
+    font-weight: bolder;
+    cursor: pointer;
+    opacity: .7;
+    transition: opacity .2s ease-in-out;
+}
+
+.btn:hover{
+    opacity: 1;
 }
 
 .btn-add {
-    background-color: rgb(151, 226, 151);
+    background-color: var(--add-button);
 }
 
 .btn-edit,
 .btn-save {
     align-self: flex-end;
-    background-color: rgb(146, 146, 222);
+    background-color: var(--edit-button);
 }
 
 .btn-delete {
-    background-color: rgb(225, 152, 152);
+    background-color: var(--delete-button);
+}
+
+/* ------- */
+
+.display-section {
+    position: sticky;
+    top: 0;    
+}
+
+.display-all-container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: var(--section-background-color);
+}
+
+.display-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.additional-info {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+h3.section-title {
+    padding: .5rem;
+    background-color: var(--background-color);
+    color: white;
+}
+
+.display-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.item-name {
+    font-weight: bold;
 }

@@ -32,6 +32,7 @@ function ExperienceDataForm({ item, onChange, onDelete }) {
             <CustomInput labelName="Start date" name="startDate" id={item.id} value={item.startDate} type="num" onChange={onChange} />
             <CustomInput labelName="End date" name="endDate" id={item.id} value={item.endDate} type="num" onChange={onChange} />
             <CustomInput labelName="Location" name="location" id={item.id} value={item.location} onChange={onChange} />
+            <CustomInput labelName="Description" name="description" id={item.id} value={item.description} type="textarea" onChange={onChange} />
             <button className="btn btn-delete" type="button" onClick={onDelete}>Delete</button>
         </div>
     )
