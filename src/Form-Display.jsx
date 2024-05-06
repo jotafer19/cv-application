@@ -2,22 +2,30 @@ function PersonalFormDisplay({ inputData }) {
     return (
         <div className="items-container">
             <div className="item-form">
-                <div className="input-group">
-                    <p className="p-label">Full name</p>
-                    <p className="p-display">{inputData.personal.fullName}</p>
-                </div>
-                <div className="input-group">
-                    <p className="p-label">Email</p>
-                    <p className="p-display">{inputData.personal.email}</p>
-                </div>
-                <div className="input-group">
-                    <p className="p-label">Phone</p>
-                    <p className="p-display">{inputData.personal.phone}</p>
-                </div>
-                <div className="input-group">
-                    <p className="p-label">Address</p>
-                    <p className="p-display">{inputData.personal.address}</p>
-                </div>
+                {inputData.personal.fullName !== "" && (
+                    <div className="input-group">
+                        <p className="p-label">Full name</p>
+                        <p className="p-display">{inputData.personal.fullName}</p>
+                    </div>
+                )}
+                {inputData.personal.email !== "" && (
+                    <div className="input-group">
+                        <p className="p-label">Email</p>
+                        <p className="p-display">{inputData.personal.email}</p>
+                    </div>
+                )}
+                {inputData.personal.phone !== "" && (
+                    <div className="input-group">
+                        <p className="p-label">Phone</p>
+                        <p className="p-display">{inputData.personal.phone}</p>
+                    </div>
+                )}
+                {inputData.personal.address !== "" && (
+                    <div className="input-group">
+                        <p className="p-label">Address</p>
+                        <p className="p-display">{inputData.personal.address}</p>
+                    </div>
+                )}
             </div>
         </div>
     )

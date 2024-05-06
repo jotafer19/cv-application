@@ -38,18 +38,19 @@ body {
 
 main {
     max-width: 1200px;
+    padding: 2rem;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-auto-rows: auto;
-    gap: 1rem;
+    display: flex;
+    gap: 2rem;
 }
 
 .form-section {
+    width: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
     gap: 2rem;
-    overflow: auto;
 }
 
 .data-container {
@@ -136,10 +137,12 @@ main {
 /* ------- */
 
 .display-section {
+    width: 600px;
     position: relative;
 }
 
 .display-all-container {
+    min-height: 700px;
     position: sticky;
     top: 0;
     padding: 2rem;
@@ -161,9 +164,20 @@ main {
 }
 
 .additional-info {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+}
+
+.additional-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+}
+
+.icon {
+    width: 24px;
 }
 
 h3.section-title {
@@ -180,8 +194,8 @@ h3.section-title {
 
 .item {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+    gap: 2rem;
 }
 
 .item-info {
@@ -192,4 +206,42 @@ h3.section-title {
 
 .item-name {
     font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        flex-direction: column;
+        font-size: .8rem;
+    }
+
+    .form-section {
+        align-self: center;
+    }
+
+    .display-section {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    main {
+        max-width: 320px;
+        padding: 1rem;
+    }
+
+    .form-section,
+    .display-section {
+        width: 100%;
+    }
+
+    .additional-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: .3rem;
+    }
 }

@@ -1,3 +1,7 @@
+import emailIcon from "./assets/icons/mail.svg"
+import phoneIcon from "./assets/icons/phone.svg"
+import addressIcon from "./assets/icons/address.svg"
+
 function DisplaySection({ finalData }) {
     const { personal, education, experience } = finalData;
 
@@ -8,9 +12,18 @@ function DisplaySection({ finalData }) {
                     <div className="personal-data display-container">
                         <h1 className="section-title">{personal.fullName}</h1>
                         <div className="additional-info">
-                            <p>{personal.email}</p>
-                            <p>{personal.phone}</p>
-                            <p>{personal.address}</p>
+                            <div className="additional-item">
+                                {personal.email && <img className="icon" src={emailIcon} alt="Email icon" />}
+                                <p>{personal.email}</p>
+                            </div>
+                            <div className="additional-item">
+                                {personal.phone && <img className="icon" src={phoneIcon} alt="Phone icon" />}
+                                <p>{personal.phone}</p>
+                            </div>
+                            <div className="additional-item">
+                                {personal.address && <img className="icon" src={addressIcon} alt="Address icon" />}
+                                <p>{personal.address}</p>
+                            </div>
                         </div>
                     </div>
                 )}
@@ -21,7 +34,7 @@ function DisplaySection({ finalData }) {
                         {education.map(item => {
                             return (
                                 <div className="item" key={item.id}>
-                                    <div className="item-info">
+                                    <div className="item-info additional">
                                         <div className="item-dates">
                                             <p>
                                                 {item.startDate}
@@ -50,7 +63,7 @@ function DisplaySection({ finalData }) {
                         {experience.map(item => {
                             return (
                                 <div className="item" key={item.id}>
-                                    <div className="item-info">
+                                    <div className="item-info additional">
                                         <div className="item-dates">
                                             <p>
                                                 {item.startDate}

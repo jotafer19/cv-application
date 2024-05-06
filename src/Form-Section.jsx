@@ -1,8 +1,10 @@
 import { useState } from "react";
+import data from "./data.jsx"
 import uniqid from 'uniqid';
 import PersonalContainer from "./Personal-Container";
 import EducationContainer from "./Education-Container";
 import ExperienceContainer from "./Experience-Container";
+import DataButtons from "./Data-Buttons.jsx";
 
 function FormSection({ finalData, setFinalData }) {
     const [inputData, setInputData] = useState(finalData);
@@ -61,8 +63,30 @@ function FormSection({ finalData, setFinalData }) {
         }
     }
 
+    function clearForm() {
+        const clearData = {
+            personal: {
+                fullName: "",
+                email: "",
+                phone: "",
+                address: "",
+            },
+            education: [],
+            experience: [],
+        }
+
+        setInputData(clearData)
+        setFinalData(clearData)
+    }
+
+    function loadExampleData() {
+        setInputData(data);
+        setFinalData(data)
+    }
+
     return (
         <section className="form-section">
+            <DataButtons clearData={clearForm} loadData={loadExampleData} />
             <PersonalContainer inputData={inputData} onChange={(event) => handleInputChange(event, "personal")} onSubmit={handleSubmitForm} />
             <EducationContainer inputData={inputData} onChange={handleEditItem} onSubmit={handleSubmitForm} onDelete={handleDeleteItem} onAdd={handleAddItem} />
             <ExperienceContainer inputData={inputData} onChange={handleEditItem} onSubmit={handleSubmitForm} onDelete={handleDeleteItem} onAdd={handleAddItem} />

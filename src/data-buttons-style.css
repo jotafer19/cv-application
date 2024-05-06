@@ -1,0 +1,29 @@
+.data-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.data-button {
+    width: 50%;
+    padding: .5rem;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    background-color: #e2e2e2e0;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.clear-data {
+    background-color: var(--delete-button);
+}
+
+.load-data {
+    background-color: var(--add-button);
+}
+
+.data-button:hover {
+    opacity: 1;
+}

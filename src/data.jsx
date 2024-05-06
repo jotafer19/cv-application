@@ -2,46 +2,46 @@ import uniqid from 'uniqid';
 
 const data = {
     personal: {
-        fullName: "Makima",
-        email: "makima@csm.dog",
-        phone: "123456789",
-        address: "Public Safety, Tokyo, Japan"
+        fullName: "Gojo Satoru",
+        email: "satorugojo@jujutsu.com",
+        phone: "123 456 789",
+        address: "Tokyo, Japan"
     },
     education: [
         {
             id: uniqid(),
-            school: "London University",
-            degree: "Robotics",
-            startDate: "2020",
-            endDate: "2024",
-            location: "London, UK"
+            school: "Gojo Clan",
+            degree: "Sorcerer Grade 1",
+            startDate: "2004",
+            endDate: "2010",
+            location: "Kyoto, Japan"
         },
         {
             id: uniqid(),
-            school: "New York University",
-            degree: "Mathematics",
-            startDate: "2016",
-            endDate: "2020",
-            location: "New York, USA"
+            school: "Tokyo Jujutsu School",
+            degree: "Sorcerer Special Grade",
+            startDate: "2010",
+            endDate: "2014",
+            location: "Tokyo, Japan"
         }
     ],
     experience: [
         {
             id: uniqid(),
-            company: "Umbrella Inc.",
-            position: "Director",
-            startDate: "2020",
-            endDate: "2024",
-            location: "London, UK",
+            company: "Tokyo Metropolitan College",
+            position: "Teacher",
+            startDate: "2014",
+            endDate: "2018",
+            location: "Tokyo, Japan",
             description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos quisquam eligendi ducimus nobis culpa? Reprehenderit distinctio rerum, tenetur vel veritatis ducimus! Minus rerum blanditiis numquam amet sed sapiente! Id, fuga."
         },
         {
             id: uniqid(),
-            company: "Black Mesa Labs",
-            position: "UI Designer",
-            startDate: "2016",
-            endDate: "2020",
-            location: "Detroit, USA",
+            company: "Jujutsu Society",
+            position: "Jujutsu Sorcerer",
+            startDate: "2014",
+            endDate: "present",
+            location: "Tokyo, Japan",
             description: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora sequi esse cumque nemo, debitis delectus iste pariatur accusantium. Hic vel praesentium omnis sunt totam reiciendis eligendi, beatae doloremque vero maiores."
         },
     ]
