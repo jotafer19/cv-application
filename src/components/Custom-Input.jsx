@@ -11,10 +11,11 @@ function CustomInput({ labelName, name, id, value, type="text", onChange }) {
                         name={name}
                         id={name + "-" + id}
                         type={type}
+                        value={value}
                         onChange={onChange}
                         cols="30"
                         rows="6"
-                    >{value}</textarea>
+                    />
                 ) : (
                     <input
                         className="input"

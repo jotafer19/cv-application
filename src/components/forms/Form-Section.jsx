@@ -1,10 +1,10 @@
 import { useState } from "react";
-import data from "./data.jsx"
+import data from "../data.jsx"
 import uniqid from 'uniqid';
-import PersonalContainer from "./Personal-Container";
-import EducationContainer from "./Education-Container";
-import ExperienceContainer from "./Experience-Container";
-import DataButtons from "./Data-Buttons.jsx";
+import PersonalContainer from "../data-container/Personal-Container.jsx";
+import EducationContainer from "../data-container/Education-Container.jsx";
+import ExperienceContainer from "../data-container/Experience-Container.jsx";
+import DataButtons from "../data-buttons/Data-Buttons.jsx";
 
 function FormSection({ finalData, setFinalData }) {
     const [inputData, setInputData] = useState(finalData);

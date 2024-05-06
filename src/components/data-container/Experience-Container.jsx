@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ExperienceDataForm } from "./Forms";
-import { ExperienceFormDisplay } from "./Form-Display";
+import { ExperienceDataForm } from "../forms/Forms";
+import { ExperienceFormDisplay } from "../forms/Form-Display";
 
 function ExperienceContainer({ inputData, onChange, onSubmit, onDelete, onAdd }) {
     const [isActive, setIsActive] = useState(false);

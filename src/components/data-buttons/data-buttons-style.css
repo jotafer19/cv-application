@@ -1,5 +1,6 @@
 .data-buttons-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
@@ -22,6 +23,10 @@
 
 .load-data {
     background-color: var(--add-button);
+}
+
+.download {
+    background-color: var(--edit-button);
 }
 
 .data-button:hover {

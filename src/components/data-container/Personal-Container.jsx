@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { PersonalDataForm } from "./Forms";
-import { PersonalFormDisplay } from "./Form-Display";
+import { PersonalDataForm } from "../forms/Forms";
+import { PersonalFormDisplay } from "../forms/Form-Display";
 
 function PersonalContainer({ inputData, onChange, onSubmit }) {
     const [isActive, setIsActive] = useState(true);

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { EducationDataForm } from "./Forms";
-import { EducationFormDisplay } from "./Form-Display";
+import { EducationDataForm } from "../forms/Forms";
+import { EducationFormDisplay } from "../forms/Form-Display"
 
 function EducationContainer({ inputData, onChange, onSubmit, onDelete, onAdd }) {
     const [isActive, setIsActive] = useState(false);

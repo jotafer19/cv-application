@@ -1,6 +1,6 @@
-import emailIcon from "./assets/icons/mail.svg"
-import phoneIcon from "./assets/icons/phone.svg"
-import addressIcon from "./assets/icons/address.svg"
+import emailIcon from "../assets/icons/mail.svg"
+import phoneIcon from "../assets/icons/phone.svg"
+import addressIcon from "../assets/icons/address.svg"
 
 function DisplaySection({ finalData }) {
     const { personal, education, experience } = finalData;
