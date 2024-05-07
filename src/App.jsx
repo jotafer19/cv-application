@@ -15,7 +15,7 @@ function App() {
         <DisplaySection finalData={finalData} />
       </main>
     </>
-  )
+  );
 }
 
 export default App;
