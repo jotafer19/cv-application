@@ -10,7 +10,7 @@ function DisplaySection({ finalData }) {
             <div className="display-all-container">
                 {Object.keys(personal).length !== 0 && (
                     <div className="personal-data display-container">
-                        <h1 className="section-title">{personal.fullName}</h1>
+                        <h2 className="section-title">{personal.fullName}</h2>
                         <div className="additional-info">
                             <div className="additional-item">
                                 {personal.email && <img className="icon" src={emailIcon} alt="Email icon" />}

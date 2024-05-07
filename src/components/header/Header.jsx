@@ -3,7 +3,7 @@ import "./header.css"
 function Header() {
     return (
         <header className="header">
-            <p className="web-title">CV Builder</p>
+            <h1 className="web-title">CV Builder</h1>
         </header>
     )
 }
